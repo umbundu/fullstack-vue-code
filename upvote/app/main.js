@@ -5,7 +5,7 @@ new Vue({
     },
     computed: {
         sortedSubmissions() {
-            // Sort in descending order
+         
             return this.submissions.sort((a, b) => {
                 return b.votes - a.votes
             });
@@ -13,10 +13,11 @@ new Vue({
     },
     methods: {
         upvote(submissionId) {
+          
             const submission = this.submissions.find(
                 submission => submission.id === submissionId
             )
-            submissionId.votes++;
+            submission.votes++;
         }
     }
 });
